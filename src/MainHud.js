@@ -21,7 +21,7 @@ class MyListItem extends Component
       }
     }
     _onPress = () => {
-        if(MainHud.CurrentState!=this.state.stateType)
+        if(MyListItem.CurrentState!=this.state.stateType)
         {
           MyListItem.CurrentState=this.state.stateType;
           this.setState({active: true});
