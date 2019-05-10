@@ -46,32 +46,16 @@ class Footer extends Component {
     return (
       <View style={styles.footer}>
         <TouchableOpacity onPress={() => this._onPress("scan")}>
-          {this.state.selectedTab === "scan" ? (
-            <ScanIcon active={true} />
-          ) : (
-            <ScanIcon active={false} />
-          )}
+            <ScanIcon active={this.state.selectedTab === "scan"} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => this._onPress("browse")}>
-          {this.state.selectedTab === "browse" ? (
-            <BrowseIcon active={true} />
-          ) : (
-            <BrowseIcon active={false} />
-          )}
+            <BrowseIcon active={this.state.selectedTab === "browse"} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => this._onPress("ingrid")}>
-          {this.state.selectedTab === "ingrid" ? (
-            <IngridIcon active={true} />
-          ) : (
-            <IngridIcon active={false} />
-          )}
+            <IngridIcon active={this.state.selectedTab === "ingrid"} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => this._onPress("profile")}>
-          {this.state.selectedTab === "profile" ? (
-            <ProfileIcon active={true} />
-          ) : (
-            <ProfileIcon active={false} />
-          )}
+            <ProfileIcon active={this.state.selectedTab === "profile"} />
         </TouchableOpacity>
       </View>
     );
