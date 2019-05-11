@@ -30,7 +30,7 @@ class MyListItem extends Component
         {
           this.setState({active: false});
         }
-        console.log("CurrentState "+MainHud.CurrentState);
+        //console.log("CurrentState "+MyListItem.CurrentState);
     };
   
     render() {
