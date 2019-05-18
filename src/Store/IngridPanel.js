@@ -4,7 +4,7 @@ import styles from "./styles";
 export default class IngridPanel extends Component {
   render() {
     return (
-      <View style={styles.inputContainer}>
+      <View style={styles.panelStyle}>
         <Text>{"Ingrid Panel"}</Text>
       </View>
     );

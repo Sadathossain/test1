@@ -4,7 +4,7 @@ import styles from "./styles";
 export default class ProfilePanel extends Component {
   render() {
     return (
-      <View style={styles.inputContainer}>
+      <View style={styles.panelStyle}>
         <Text>{"Profile Panel"}</Text>
       </View>
     );
