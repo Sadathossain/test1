@@ -3,6 +3,7 @@ import { View, TextInput, TouchableOpacity, Image, Button } from "react-native";
 import styles from "./styles";
 
 import SingleProduct from '../Product/SingleProduct';
+import InputProductId from '../Product/InputProductId';
 
 export default class ScanPanel extends Component {
   state =
@@ -18,12 +19,12 @@ export default class ScanPanel extends Component {
     });
   };
 
-  _onPress = () => {
+  onPress = () => {
     if(this.state.id.trim() == "")
     {
         return;
     }
-    
+    console.log("idChangeHandler "+this.state.id);
     this.setState({
       idSelected:2,
     });
@@ -37,24 +38,7 @@ export default class ScanPanel extends Component {
       panel = <SingleProduct id={this.state.id}></SingleProduct>;
     } 
     else {
-      panel = (
-        <View style={styles.inputContainer}>
-            <TextInput
-                style={styles.placeInput}
-                placeholder="Enter Id"
-                onChangeText={this.idChangeHandler}
-                > 
-            </TextInput>
-            {/* <TouchableOpacity onPress={this._onPress}>
-              { <Image source={'.../assets/Button/btn-search.png'}></Image> }
-              <Image source={'../../assets/Button/btn-search.png'}></Image> 
-            </TouchableOpacity> */}
-              <Button title="Add"
-                      style={styles.placeButton}
-                      onPress={this._onPress}>
-              </Button>
-          </View>
-      );
+      panel = <InputProductId idChangeHandler={this.idChangeHandler} onPress={this.onPress}></InputProductId>;
     }
 
     return (
